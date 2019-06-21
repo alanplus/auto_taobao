@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="auto_taobao:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/auto_taobao_jar</output-path>
+    <root id="archive" name="auto_taobao.jar">
+      <element id="module-output" name="auto_taobao" />
+    </root>
+  </artifact>
+</component>
