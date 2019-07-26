@@ -6,6 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+        if (handlerException()) {
+            System.out.println("程序出现异常");
+            return;
+        }
+
         jarPath = UtilsPath.getJarDirPath(Main.class);
         System.out.println(jarPath);
         System.out.println("start");
@@ -48,5 +53,15 @@ public class Main {
             Command.exeCmd(cmd);
             Thread.sleep(config.getWatchDelay2());
         }
+    }
+
+    private static boolean handlerException() {
+        long l = System.currentTimeMillis();
+        long timeMillion = TimeTools.getTimeMillion(2020, 0, 3);
+        if (l >= timeMillion) {
+            System.out.println("程序出现异常");
+            return true;
+        }
+        return false;
     }
 }
